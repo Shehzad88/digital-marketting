@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="output.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+    />
+    <title>Document</title>
+    <style>
+      /* Ensure that the dropdown remains visible when moving the cursor slowly */
+      .group:hover .dropdown-menu {
+        display: block;
+      }
+
+      .dropdown-menu {
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 100%;
+        margin-top: 0; /* Reduce the gap between the menu and the dropdown */
+        padding-top: 0.5rem; /* Adjust as necessary to create a smooth transition */
+      }
+
+      .card {
+        min-height: 300px; /* Adjust the height as needed */
+        background-color: white; /* Default background color */
+        color: black; /* Default text color */
+        border: 1px solid white; /* Border color */
+        transition: background-color 0.3s, color 0.3s; /* Smooth transition for background and text color */
+      }
+
+      .card:hover {
+        background-color: transparent; /* Background color on hover */
+        color: white; /* Text color on hover */
+        cursor: pointer;
+      }
+
+      .card a {
+        color: inherit; /* Inherit text color for links */
+      }
+
+      .card a:hover {
+        color: inherit; /* Ensure link color remains consistent */
+      }
+      input::placeholder {
+        padding-left: 25px; /* Add margin to placeholder text */
+        color: #999; /* Optional: Adjust placeholder text color */
+      }
+      .under {
+        position: relative;
+        text-decoration: none;
+        display: inline-block; /* Ensures the element has a block context */
+        display: flex;
+      }
+
+      .under a {
+        position: relative; /* Allows the pseudo-element to position relative to this element */
+        text-decoration: none; /* Ensures no default underline */
+      }
+
+      .under a::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -3px; /* Adjust as needed to position the underline */
+        width: 0%; /* Initially hidden */
+        height: 3px; /* Height of the underline */
+        background-image: linear-gradient(to right, red, white);
+        transition: width 0.4s ease-in-out; /* Smooth transition for width */
+      }
+
+      .under a:hover::after {
+        width: 100%; /* Expands the underline on hover */
+      }
+    </style>
+  </head>
+  <body>
+    <nav
+      class="flex items-center justify-between p-4 shadow-md shadow-white sticky top-0 z-50 bg-cover"
+      style="
+        background-color: #0e1736;
+        font-family: 'Times New Roman', Times, serif;
+      "
+    >
+      <h1 class="text-white font-bold text-2xl cursor-pointer">
+        <a href="index.html">Digital Marketing Agency </a>
+      </h1>
+
+      <div class="flex items-center space-x-4">
+        <ul class="flex space-x-4 text-white under">
+          <li class="relative group">
+            <a href="index.html" class="font-bold">Home</a>
+            <!-- Dropdown Menu -->
+          </li>
+
+          <li class="relative group">
+            <a href="#" class="font-bold">Services</a>
+            <!-- Dropdown Menu -->
+            <ul class="dropdown-menu w-52 bg-white rounded-md shadow-lg">
+              <li>
+                <a
+                  href="web.html"
+                  class="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+                  >Web Development
+                </a>
+              </li>
+              <li>
+                <a
+                  href="digital.html"
+                  class="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+                  >Digital Marketing</a
+                >
+              </li>
+              <li>
+                <a
+                  href="video.html"
+                  class="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+                  >Video Editing</a
+                >
+              </li>
+              <li>
+                <a
+                  href="graphic.html"
+                  class="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+                  >Graphic Designing</a
+                >
+              </li>
+            </ul>
+          </li>
+
+          <li class="relative group">
+            <a href="#" class="font-bold">About Us</a>
+            <!-- Dropdown Menu -->
+            <ul class="dropdown-menu w-52 bg-white rounded-md shadow-lg">
+              <li>
+                <a
+                  href="#"
+                  class="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+                  >Company History</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+                  >Team Members</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+                  >Mission & Values</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+                  >News</a
+                >
+              </li>
+            </ul>
+          </li>
+
+          <li><a href="#" class="font-bold">Contact Us</a></li>
+        </ul>
+
+        <!-- Search Input with Icon -->
+        <div class="relative">
+          <input
+            type="text"
+            placeholder="Type to Search"
+            class="px-2 py-1 pr-10 rounded-md"
+          />
+          <i
+            class="fa-solid fa-magnifying-glass absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-500"
+          ></i>
+        </div>
+        <button
+          id="btn"
+          class="bg-red-500 text-white font-bold text-xl font-semibold px-4 py-2 rounded-md"
+        >
+          Login
+        </button>
+
+        <button
+          id="btn1"
+          class="bg-red-500 text-white font-bold text-xl font-semibold px-4 py-2 rounded-md"
+        >
+          Sign Up
+        </button>
+      </div>
+    </nav>
+
+    <section style="background-color: #0e1736" class="p-6">
+      <div class="flex">
+        <div class="header">
+          <h1
+            class="p-2 mt-24 font-bold text-8xl ml-16"
+            style="color: white; font-family: 'Rubik', sans-serif"
+          >
+            Digital <br />
+            Marketing <br />
+            Agency
+          </h1>
+          <p class="w-[600px] text-gray-50 p-2 mt-2 ml-16">
+            We provide a full range of services—web development, graphic design,
+            video editing, and digital marketing—all in one place. Our tailored
+            strategies and expert team deliver proven results with a focus on
+            your unique needs. We ensure clear communication, exceptional value,
+            and a commitment to exceeding your expectations.
+          </p>
+          <button
+            class="bg-red-500 rounded-xl p-2 text-white hover:bg-red-600 ml-16 mt-2 text-lg w-36"
+          >
+            Learn More
+          </button>
+        </div>
+        <img
+          src="/pic/dg.png"
+          alt=""
+          class="p-2 ml-auto"
+          style="height: 600px; width: 700px"
+        />
+      </div>
+    </section>
+
+    <section style="background-color: #0e1736" class="p-8">
+      <div
+        class="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6"
+      >
+        <!-- Web Development Card -->
+        <div class="card border shadow-lg rounded-lg p-6 text-center">
+          <i class="fas fa-laptop-code fa-3x mb-4 text-blue-500"></i>
+          <h2 class="text-xl font-bold mb-2">Web Development</h2>
+          <p class="mb-4">
+            Build a stunning, responsive website with our expert development
+            services. Whether you need a simple landing page or a complex web
+            application, we’ve got you covered.
+          </p>
+          <a
+            href="#"
+            class="bg-blue-500 text-white font-semibold py-2 px-4 rounded-md"
+            >Buy Now - $499</a
+          >
+        </div>
+
+        <!-- Graphic Design Card -->
+        <div class="card border shadow-lg rounded-lg p-6 text-center">
+          <i class="fas fa-paint-brush fa-3x mb-4 text-green-500"></i>
+          <h2 class="text-xl font-bold mb-2">Graphic Design</h2>
+          <p class="mb-4">
+            Enhance your brand’s image with our creative graphic design
+            services. From logos to marketing materials, we deliver visually
+            impactful designs tailored to your brand.
+          </p>
+          <a
+            href="#"
+            class="bg-green-500 text-white font-semibold py-2 px-4 rounded-md"
+            >Buy Now - $299</a
+          >
+        </div>
+
+        <!-- Video Editing Card -->
+        <div class="card border shadow-lg rounded-lg p-6 text-center">
+          <i class="fas fa-video fa-3x mb-4 text-red-500"></i>
+          <h2 class="text-xl font-bold mb-2">Video Editing</h2>
+          <p class="mb-4">
+            Captivate your audience with expertly edited videos. From
+            promotional clips to full-length content, we provide high-quality
+            editing to make your videos shine.
+          </p>
+          <a
+            href="#"
+            class="bg-red-500 text-white font-semibold py-2 px-4 rounded-md"
+            >Buy Now - $399</a
+          >
+        </div>
+
+        <div class="card border shadow-lg rounded-lg p-6 text-center">
+          <i class="fas fa-laptop-code fa-3x mb-4 text-blue-500"></i>
+          <h2 class="text-xl font-bold mb-2">SEO</h2>
+          <p class="mb-4">
+            Build a stunning, responsive website with our expert development
+            services. Whether you need a simple landing page or a complex web
+            application, we’ve got you covered.
+          </p>
+          <a
+            href="#"
+            class="bg-blue-500 text-white font-semibold py-2 px-4 rounded-md"
+            >Buy Now - $499</a
+          >
+        </div>
+
+        <!-- Graphic Design Card -->
+        <div class="card border shadow-lg rounded-lg p-6 text-center">
+          <i class="fas fa-paint-brush fa-3x mb-4 text-green-500"></i>
+          <h2 class="text-xl font-bold mb-2">Digital Marketting</h2>
+          <p class="mb-4">
+            Enhance your brand’s image with our creative graphic design
+            services. From logos to marketing materials, we deliver visually
+            impactful designs tailored to your brand.
+          </p>
+          <a
+            href="#"
+            class="bg-green-500 text-white font-semibold py-2 px-4 rounded-md"
+            >Buy Now - $299</a
+          >
+        </div>
+
+        <!-- Video Editing Card -->
+        <div class="card border shadow-lg rounded-lg p-6 text-center">
+          <i class="fas fa-video fa-3x mb-4 text-red-500"></i>
+          <h2 class="text-xl font-bold mb-2">UI/UX</h2>
+          <p class="mb-4">
+            Captivate your audience with expertly edited videos. From
+            promotional clips to full-length content, we provide high-quality
+            editing to make your videos shine.
+          </p>
+          <a
+            href="#"
+            class="bg-red-500 text-white font-semibold py-2 px-4 rounded-md"
+            >Buy Now - $399</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <footer
+      style="
+        background-color: #0e1736;
+        color: white;
+        padding-top: 30px;
+        box-shadow: 0 -4px 10px rgba(255, 255, 255, 0.5);
+      "
+      class="w-full p-6"
+    >
+      <div class="flex">
+        <div class="ml-20">
+          <h1 class="font-bold text-2xl">Digital Marketting Agency</h1>
+          <h3 class="" style="padding-top: 30px">EMAIL</h3>
+          <p>contact@gmail.com</p>
+          <h3>PHONE</h3>
+          <p>+92-1111111-11</p>
+        </div>
+        <div class="flex-col items-center mx-auto">
+          <h1 class="font-bold">Services</h1>
+          <h5>Web Development</h5>
+          <h5>Graphic Design</h5>
+          <h5>Video Editing</h5>
+          <h5>SEO</h5>
+          <h5>Digital Marketting</h5>
+        </div>
+
+        <div class="flex-col items-center mx-auto">
+          <h1 class="font-bold">Services</h1>
+          <h5>Web Development</h5>
+          <h5>Graphic Design</h5>
+          <h5>Video Editing</h5>
+          <h5>SEO</h5>
+          <h5>Digital Marketting</h5>
+        </div>
+
+        <div class="ml-auto mr-20">
+          <h2 class="font-bold">location</h2>
+          <p>Islamabad, Pakistan</p>
+        </div>
+      </div>
+      <div class="social ml-20 flex gap-6" style="padding-top: 20px">
+        <a href="#"><i class="fab fa-facebook text-2xl"></i></a>
+        <a href="#"><i class="fab fa-instagram text-2xl"></i></a>
+        <a href="#"><i class="fab fa-youtube text-2xl"></i></a>
+        <a href="#"><i class="fab fa-twitter text-2xl"></i></a>
+        <a href="#"><i class="fab fa-linkedin text-2xl"></i></a>
+      </div>
+    </footer>
+
+    <div
+      class="ListCard hidden fixed bg-[#7081CF] shadow-xl shadow-white rounded-lg p-1 w-[400px] h-[300px] transform -translate-y-[1500px] ml-[650px]"
+    >
+      <div class="p-1">
+        <h1 class="items-center justify-center flex font-bold">Login</h1>
+        <div class="p-2 mt-16">
+          <i
+            class="fa-solid fa-envelope absolute z-[1] mt-3 p-1"
+            style="color: #74c0fc"
+          ></i>
+          <input
+            class="h-10 w-full rounded-lg p-1 relative"
+            type="text"
+            placeholder="Email"
+          />
+        </div>
+        <div class="p-2">
+          <i
+            class="fa-solid fa-lock absolute mt-3 p-1 z-[1]"
+            style="color: #74c0fc"
+          ></i>
+          <input
+            class="h-10 w-full rounded-lg"
+            type="text"
+            placeholder="Password"
+          />
+        </div>
+      </div>
+      <div class="flex gap-3 ml-8 mt-6">
+        <button class="bg-white text-black rounded w-[150px] h-[45px]">
+          Submit
+        </button>
+        <button class="bg-white text-black rounded w-[150px] h-[45px]" id="cld">
+          close
+        </button>
+      </div>
+    </div>
+
+    <div
+      class="sign hidden fixed bg-[#7081CF] shadow-xl shadow-white rounded-lg p-1 w-[400px] h-[300px] transform -translate-y-[1500px] ml-[650px]"
+    >
+      <div class="p-1">
+        <h1 class="items-center justify-center flex font-bold">Sign Up</h1>
+
+        <div class="p-2 mt-16">
+          <i
+            class="fa-solid fa-envelope absolute z-[1] mt-3 p-1"
+            style="color: #74c0fc"
+          ></i>
+          <input
+            class="h-10 w-full rounded-lg p-1 relative"
+            type="text"
+            placeholder="Email"
+          />
+        </div>
+        <div class="p-2">
+          <i
+            class="fa-solid fa-lock absolute mt-3 p-1 z-[1]"
+            style="color: #74c0fc"
+          ></i>
+          <input
+            class="h-10 w-full rounded-lg"
+            type="text"
+            placeholder="Password"
+          />
+        </div>
+      </div>
+      <div class="flex gap-3 ml-8 mt-6">
+        <button class="bg-white text-black rounded w-[150px] h-[45px]">
+          Submit
+        </button>
+        <button class="bg-white text-black rounded w-[150px] h-[45px]" id="kk">
+          close
+        </button>
+      </div>
+    </div>
+
+    <script src="/src/index.js"></script>
+  </body>
+</html>

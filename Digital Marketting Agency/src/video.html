@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="output.css" />
+    <title>Web Development</title>
+  </head>
+  <body style="background-color: #0e1736">
+    <style>
+      .group:hover .dropdown-menu {
+        display: block;
+      }
+
+      .dropdown-menu {
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 100%;
+        margin-top: 0; /* Reduce the gap between the menu and the dropdown */
+        padding-top: 0.5rem; /* Adjust as necessary to create a smooth transition */
+      }
+    </style>
+    <nav
+      class="flex items-center justify-between p-4 shadow-md shadow-white sticky top-0 z-50 bg-cover"
+      style="
+        background-color: #0e1736;
+        font-family: 'Times New Roman', Times, serif;
+      "
+    >
+      <h1 class="text-white font-bold text-2xl cursor-pointer">
+        <a href="index.html">Digital Marketing Agency </a>
+      </h1>
+
+      <div class="flex items-center space-x-4">
+        <ul class="flex space-x-4 text-white under">
+          <li class="relative group">
+            <a href="index.html" class="font-bold">Home</a>
+            <!-- Dropdown Menu -->
+          </li>
+
+          <li class="relative group">
+            <a href="#" class="font-bold">Services</a>
+            <!-- Dropdown Menu -->
+            <ul class="dropdown-menu w-52 bg-white rounded-md shadow-lg">
+              <li>
+                <a
+                  href="web.html"
+                  class="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+                  >Web Development
+                </a>
+              </li>
+              <li>
+                <a
+                  href="digital.html"
+                  class="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+                  >Digital Marketing</a
+                >
+              </li>
+              <li>
+                <a
+                  href="video.html"
+                  class="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+                  >Video Editing</a
+                >
+              </li>
+              <li>
+                <a
+                  href="graphic.html"
+                  class="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+                  >Graphic Designing</a
+                >
+              </li>
+            </ul>
+          </li>
+
+          <li class="relative group">
+            <a href="#" class="font-bold">About Us</a>
+            <!-- Dropdown Menu -->
+            <ul class="dropdown-menu w-52 bg-white rounded-md shadow-lg">
+              <li>
+                <a
+                  href="#"
+                  class="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+                  >Company History</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+                  >Team Members</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+                  >Mission & Values</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+                  >News</a
+                >
+              </li>
+            </ul>
+          </li>
+
+          <li><a href="#" class="font-bold">Contact Us</a></li>
+        </ul>
+
+        <!-- Search Input with Icon -->
+        <div class="relative">
+          <input
+            type="text"
+            placeholder="Type to Search"
+            class="px-2 py-1 pr-10 rounded-md"
+          />
+          <i
+            class="fa-solid fa-magnifying-glass absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-500"
+          ></i>
+        </div>
+        <button
+          id="btn"
+          class="bg-red-500 text-white font-bold text-xl font-semibold px-4 py-2 rounded-md"
+        >
+          Login
+        </button>
+
+        <button
+          id="btn1"
+          class="bg-red-500 text-white font-bold text-xl font-semibold px-4 py-2 rounded-md"
+        >
+          Sign Up
+        </button>
+      </div>
+    </nav>
+
+    <section>
+      <div class="flex flex-col items-center justify-center text-center">
+        <h1
+          class="text-white text-2xl p-2 font-bold text-8xl mt-20 underline decoration-red-500"
+        >
+          Video Editing
+        </h1>
+        <p class="text-white text-lg p-2 left-2 mt-16">
+          Master video editing techniques for creating professional videos.
+          Learn to use software like Adobe Premiere Pro and Final Cut Pro for
+          video production.
+        </p>
+      </div>
+
+      <div class="container mx-auto px-6 p-8">
+        <div class="flex flex-wrap justify-center space-x-4 gap-8">
+          <!-- HTML Card -->
+          <div
+            class="card max-w-sm rounded overflow-hidden shadow-lg bg-white p-6"
+          >
+            <img
+              src="https://t3.ftcdn.net/jpg/02/12/85/70/360_F_212857017_07g6Op4rlzcEjGniDucqWQ6IFYD7nTsd.jpg"
+              alt="HTML"
+              class="w-[300px] h-[300PX] mb-4 object-cover"
+            />
+            <h3 class="text-xl font-semibold text-gray-800 mb-2">SEO</h3>
+            <p class="text-gray-600 mb-4">
+              Master the foundation of web development with HTML. Build the
+              structure of websites, from simple pages to complex applications.
+            </p>
+            <a
+              href="#"
+              class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600"
+              >Start Learning</a
+            >
+          </div>
+
+          <!-- CSS Card -->
+          <div class="max-w-sm rounded overflow-hidden shadow-lg bg-white p-6">
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/9453/9453222.png"
+              alt="CSS"
+              class="w-[300px] h-[300px] mb-4"
+            />
+            <h3 class="text-xl font-semibold text-gray-800 mb-2">
+              Content marketting
+            </h3>
+            <p class="text-gray-600 mb-4">
+              Style your websites with CSS. Learn to create visually appealing
+              and responsive designs that stand out on any device.
+            </p>
+            <a
+              href="#"
+              class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600"
+              >Start Learning</a
+            >
+          </div>
+
+          <!-- JavaScript Card -->
+          <div class="max-w-sm rounded overflow-hidden shadow-lg bg-white p-6">
+            <img
+              src="https://www.pngitem.com/pimgs/m/3-36368_social-media-png-transparent-social-media-marketing-icon.png"
+              alt="JavaScript"
+              class="w-[300px] h-[300px] mb-4"
+            />
+            <h3 class="text-xl font-semibold text-gray-800 mb-2">
+              Social Media marketting
+            </h3>
+            <p class="text-gray-600 mb-4">
+              Bring your websites to life with JavaScript. Learn to create
+              dynamic, interactive web applications that engage users.
+            </p>
+            <a
+              href="#"
+              class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600"
+              >Start Learning</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="container mx-auto px-6 p-8">
+        <div class="flex flex-wrap justify-center space-x-4 gap-8">
+          <!-- HTML Card -->
+          <div class="max-w-sm rounded overflow-hidden shadow-lg bg-white p-6">
+            <img
+              src="https://media.geeksforgeeks.org/wp-content/uploads/20240109153705/video-marketing-copy.webp"
+              alt="HTML"
+              class="w-full h-[330px] mb-4 object-cover"
+            />
+            <h3 class="text-xl font-semibold text-gray-800 mb-2">
+              Video Marketting
+            </h3>
+            <p class="text-gray-600 mb-4">
+              Producing and promoting video content to engage audiences on
+              platforms like YouTube and social media
+            </p>
+            <a
+              href="#"
+              class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600"
+              >Start Learning</a
+            >
+          </div>
+
+          <!-- CSS Card -->
+          <div class="max-w-sm rounded overflow-hidden shadow-lg bg-white p-6">
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/5025/5025003.png"
+              alt="CSS"
+              class="w-full h-[300px] mb-4"
+            />
+            <h3 class="text-xl font-semibold text-gray-800 mb-2">
+              Affiliate Marketing
+            </h3>
+            <p class="text-gray-600 mb-4">
+              Partnering with affiliates to promote products or services, where
+              they earn a commission for each sale generated through their
+              marketing efforts
+            </p>
+            <a
+              href="#"
+              class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600"
+              >Start Learning</a
+            >
+          </div>
+
+          <!-- JavaScript Card -->
+          <div class="max-w-sm rounded overflow-hidden shadow-lg bg-white p-6">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbBJNHudMkgS3wwDZFGtB-u6lwrDuIgeg4Cg&s"
+              alt="JavaScript"
+              class="w-[330px] h-[330px] mb-4"
+            />
+            <h3 class="text-xl font-semibold text-gray-800 mb-2">
+              Pay-Per-Click (PPC) Advertising
+            </h3>
+            <p class="text-gray-600 mb-4">
+              Running paid ads on search engines and social media platforms to
+              drive targeted traffic to a website.
+            </p>
+            <a
+              href="#"
+              class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600"
+              >Start Learning</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer
+      style="
+        background-color: #0e1736;
+        color: white;
+        padding-top: 30px;
+        box-shadow: 0 -4px 10px rgba(255, 255, 255, 0.5);
+      "
+      class="w-full p-6"
+    >
+      <div class="flex">
+        <div class="ml-20">
+          <h1 class="font-bold text-2xl">Digital Marketting Agency</h1>
+          <h3 class="" style="padding-top: 30px">EMAIL</h3>
+          <p>contact@gmail.com</p>
+          <h3>PHONE</h3>
+          <p>+92-1111111-11</p>
+        </div>
+        <div class="flex-col items-center mx-auto">
+          <h1 class="font-bold">Services</h1>
+          <h5>Web Development</h5>
+          <h5>Graphic Design</h5>
+          <h5>Video Editing</h5>
+          <h5>SEO</h5>
+          <h5>Digital Marketting</h5>
+        </div>
+
+        <div class="flex-col items-center mx-auto">
+          <h1 class="font-bold">Services</h1>
+          <h5>Web Development</h5>
+          <h5>Graphic Design</h5>
+          <h5>Video Editing</h5>
+          <h5>SEO</h5>
+          <h5>Digital Marketting</h5>
+        </div>
+
+        <div class="ml-auto mr-20">
+          <h2 class="font-bold">location</h2>
+          <p>Islamabad, Pakistan</p>
+        </div>
+      </div>
+      <div class="social ml-20 flex gap-6" style="padding-top: 20px">
+        <a href="#"><i class="fab fa-facebook text-2xl"></i></a>
+        <a href="#"><i class="fab fa-instagram text-2xl"></i></a>
+        <a href="#"><i class="fab fa-youtube text-2xl"></i></a>
+        <a href="#"><i class="fab fa-twitter text-2xl"></i></a>
+        <a href="#"><i class="fab fa-linkedin text-2xl"></i></a>
+      </div>
+    </footer>
+    <script src="/src/index.js"></script>
+  </body>
+</html>
